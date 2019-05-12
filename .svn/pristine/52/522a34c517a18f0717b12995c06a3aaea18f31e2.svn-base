@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">sdk</string>
+    <string name="no_data">No Data for current Request!</string>
+    <string name="email_exist">Email has been registered</string>
+    <string name="os_call_support_success">You had called %1$s successfully at %2$s</string>
+    <string name="os_call_support_fail">You had called %1$s failed at %2$s</string>
+    <string name="wrong_password">Incorrect Password</string>
+</resources>

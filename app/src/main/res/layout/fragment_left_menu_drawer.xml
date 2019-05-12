@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp250"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:padding="@dimen/dp10">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_profile_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="5dp"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@mipmap/ic_profile_pic"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/white"
+        fresco:roundingBorderWidth="2dp"/>
+
+    <RelativeLayout
+        android:id="@+id/noti_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sdv_profile_photo"
+        android:layout_marginTop="@dimen/dp20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/noti_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/microsoft_jhenghei"
+            android:padding="@dimen/dp10"
+            android:text="@string/notification"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font15"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/noti_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_btn_bg"
+            android:fontFamily="@fonts/microsoft_jhenghei"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="@dimen/dp5"
+            android:paddingRight="@dimen/dp10"
+            android:paddingBottom="@dimen/dp5"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@id/noti_ll"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/setting_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:fontFamily="@fonts/microsoft_jhenghei"
+        android:padding="@dimen/dp10"
+        android:text="@string/setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font15"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@id/setting_tv"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/faq_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view2"
+        android:fontFamily="@fonts/microsoft_jhenghei"
+        android:padding="@dimen/dp10"
+        android:text="@string/faq"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font15"
+        android:textStyle="bold"/>
+
+    <!--<View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@id/faq_tv"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/setting_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@fonts/microsoft_jhenghei"
+        android:padding="@dimen/dp10"
+        android:text="@string/setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font15"
+        android:textStyle="bold"
+        android:visibility="gone"/>-->
+
+    <TextView
+        android:id="@+id/signout_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/faq_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/logout_btn_bg"
+        android:fontFamily="@fonts/microsoft_jhenghei"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingRight="@dimen/dp20"
+        android:paddingBottom="@dimen/dp10"
+        android:text="@string/signout"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font15"
+        android:textStyle="bold"/>
+</RelativeLayout>

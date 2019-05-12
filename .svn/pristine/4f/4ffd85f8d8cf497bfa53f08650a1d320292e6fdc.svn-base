@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TutorRoom</string>
+    <string name="start">GET START</string>
+    <string name="name">Hi, guest!</string>
+    <string name="welcome">Welcome to TutorRoom!</string>
+    <string name="enter_name">Enter Your Name</string>
+    <string name="enter_pass">Enter Your Password</string>
+    <string name="reenter_pass">Re-Enter Password</string>
+    <string name="enter_email">Enter Your Email</string>
+    <string name="signin">SIGN IN</string>
+    <string name="login_with">Or Login with:</string>
+    <string name="forget_pass">Forget password</string>
+    <string name="login">LOGIN</string>
+    <string name="change_user">Change User</string>
+    <!--<string name="app_name">TutorRoom</string>
+    <string name="app_name">TutorRoom</string>
+    <string name="app_name">TutorRoom</string>
+    <string name="app_name">TutorRoom</string>
+    <string name="app_name">TutorRoom</string>
+    <string name="app_name">TutorRoom</string>
+    <string name="app_name">TutorRoom</string>-->
+</resources>

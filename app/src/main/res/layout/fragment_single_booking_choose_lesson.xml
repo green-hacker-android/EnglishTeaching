@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/next_tv"
+        android:layout_below="@id/tool_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dp10">
+
+
+            <LinearLayout
+                android:id="@+id/step_indicator_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10"
+                android:weightSum="7">
+
+                <TextView
+                    android:id="@+id/lesson_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_weight="0"
+                    android:background="@drawable/blue_btn_bg"
+                    android:paddingLeft="@dimen/dp15"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingRight="@dimen/dp15"
+                    android:paddingBottom="@dimen/dp10"
+                    android:text="@string/one"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/lesson_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingRight="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10"
+                    android:text="@string/choose_lesson"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+
+                <View
+                    android:id="@+id/time_viewer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:background="@color/pale_blue"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/calendar_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_weight="0"
+                    android:background="@drawable/grey_btn_bg"
+                    android:paddingLeft="@dimen/dp15"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingRight="@dimen/dp15"
+                    android:paddingBottom="@dimen/dp10"
+                    android:text="@string/two"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tutor_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@drawable/grey_btn_bg"
+                    android:paddingLeft="@dimen/dp15"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingRight="@dimen/dp15"
+                    android:paddingBottom="@dimen/dp10"
+                    android:text="@string/three"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/package_spinner_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/step_indicator_ll"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/package_spinner_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp15"
+                android:paddingBottom="@dimen/dp10">
+
+                <TextView
+                    android:id="@+id/package_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:text="@string/choose_package"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:src="@drawable/dropdown_selector_64"/>
+            </LinearLayout>-->
+
+            <Spinner
+                android:id="@+id/package_spinner"
+                android:layout_width="@dimen/dp200"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/step_indicator_ll"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/dp5"/><!-- style="@style/SpinnerTheme"-->
+
+            <TextView
+                android:id="@+id/title_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/package_spinner"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/pale_blue"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="@string/lesson"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lesson_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/title_header"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/white"
+                android:visibility="visible"/>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_data"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/next_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/blue_btn_bg"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingTop="@dimen/dp10"
+        android:paddingRight="@dimen/dp30"
+        android:paddingBottom="@dimen/dp10"
+        android:text="@string/next"
+        android:textColor="@color/white"/>
+</RelativeLayout>

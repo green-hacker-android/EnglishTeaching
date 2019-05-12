@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#0b4090</color>-->
+    <color name="colorPrimary">#032A6F</color>
+    <color name="colorPrimaryDark">#042663</color>
+    <color name="colorAccent">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="dark_grey">#4d4d4d</color>
+    <color name="mid_dark_grey">#676767</color>
+    <color name="grey">#9f9f9f</color>
+    <color name="light_grey">#d7d7d7</color>
+    <color name="red">#fc6366</color>
+    <color name="signout_bg">#444243</color>
+    <color name="pink">#ff5d5e</color>
+    <color name="yellow">#fdd224</color>
+    <color name="schedule_green">#006400</color>
+    <color name="green">#8800867D</color>
+    <color name="btn_bg_rounded_green_normal">#00ABA0</color>
+    <color name="btn_bg_rounded_green_press">#FF00867D</color>
+    <color name="title_background_light_black">#34404E</color>
+    <color name="light_blue">#214382</color>
+    <color name="pale_blue">#778fba</color>
+    <color name="sky_blue">#1372ff</color>
+</resources>

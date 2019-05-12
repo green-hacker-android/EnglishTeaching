@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/change_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@fonts/microsoft_jhenghei"
+                android:text="@string/change_user"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font15"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/profile_pic_img"
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp80"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp70"
+                android:layout_marginBottom="@dimen/dp20"
+                android:clickable="false"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/person_round_bg"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/grey"
+                fresco:roundingBorderWidth="2dp"/>
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_pic_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp30"
+                android:fontFamily="@fonts/microsoft_jhenghei"
+                android:text="@string/name"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font30"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/enter_pass"
+                android:inputType="numberPassword"
+                android:maxLines="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/password_error_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:fontFamily="@fonts/microsoft_jhenghei"
+                android:text="@string/pass_error"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password_error_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/blue_btn_bg"
+                android:fontFamily="@fonts/microsoft_jhenghei"
+                android:paddingLeft="@dimen/dp30"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp30"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font15"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp10"
+                android:fontFamily="@fonts/microsoft_jhenghei"
+                android:text="@string/forget_pass"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font15"/>
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forget_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp40"
+                android:fontFamily="@fonts/microsoft_jhenghei"
+                android:text="@string/have_no_account"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font15"/>
+
+            <LinearLayout
+                android:id="@+id/footer_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp160"
+                android:layout_below="@id/signup"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/curve"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:fontFamily="@fonts/microsoft_jhenghei"
+                        android:text="@string/login_with"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/font15"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp60"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/facebook"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:src="@mipmap/facebook_128"/>
+
+                        <ImageView
+                            android:id="@+id/twitter"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:layout_marginRight="@dimen/dp20"
+                            android:src="@mipmap/twitter_128"/>
+
+                        <ImageView
+                            android:id="@+id/google"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:src="@mipmap/google_128"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

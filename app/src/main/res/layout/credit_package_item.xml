@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/credit_package_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_grey"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/credit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp2"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credits"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/credit_package_content_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit_package_title_ll"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp2"
+            android:text="@string/dollar"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/credit_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font30"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp2"
+            android:text="@string/usd"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit_package_content_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp8"
+        android:background="@drawable/blue_btn_bg"
+        android:paddingStart="@dimen/dp25"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/dp25"
+        android:paddingBottom="@dimen/dp8"
+        android:text="@string/buy"
+        android:textColor="@color/white"/>
+</RelativeLayout>

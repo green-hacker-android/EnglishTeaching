@@ -1,0 +1,90 @@
+package inc.osbay.android.tutorroom.sdk.client;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class ServerRequestManager {
+    private static final String TAG = ServerRequestManager.class.getSimpleName();
+    private Context mContext;
+    private RequestQueue mRequestQueue;
+
+    public ServerRequestManager(Context context) {
+        mContext = context;
+        mRequestQueue = Volley.newRequestQueue(mContext);
+    }
+
+    public void registerStudent(String userName, String password, String email,
+                                String registerType, final OnRequestFinishedListener listener) {
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
+        JSONObject params = new JSONObject();
+        JSONObject data = new JSONObject();
+        String dataString;
+        try {
+            data.put("user_name", userName);
+            data.put("password", password);
+            data.put("email", email);
+            data.put("register_type", registerType);
+            dataString = String.valueOf(data);
+
+            data.put("user_name", userName);
+            data.put("password", password);
+            data.put("email", email);
+            data.put("register_type", registerType);
+        } catch (JSONException je) {
+            Log.e(TAG, "Cannot create data object.", je);
+        }
+
+        ServerRequest request = new ServerRequest(mContext, "GetLatestPublishVersion", params, new Response.Listener<ServerResponse>() {
+            @Override
+            public void onResponse(ServerResponse response) {
+                /*Version json = null;
+                try {
+                    json = new Version(response.getJSONObjResult());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                listener.onSuccess(json);*/
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                listener.onError((ServerError) error);
+                Log.i("Error getting Version", String.valueOf(error));
+            }
+        });
+
+        mRequestQueue.add(request);
+    }
+
+    /**
+     * Listener to get callback for server request process.
+     *
+     * @author Ambrose
+     */
+    public interface OnRequestFinishedListener {
+        /**
+         * Callback method for success case.
+         *
+         * @param result Response object.
+         */
+        void onSuccess(Object result);
+
+        /**
+         * Callback method for error case.
+         *
+         * @param err Error object
+         */
+        void onError(ServerError err);
+    }
+}

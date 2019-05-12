@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp10">
+
+            <!--<ImageView
+                android:id="@+id/noti_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/dp10"
+                android:src="@mipmap/notification"/>-->
+
+            <RelativeLayout
+                android:id="@+id/profile_pic_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp10">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_profile_photo"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_centerInParent="true"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@mipmap/ic_profile_pic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/white"
+                    fresco:roundingBorderWidth="2dp"/>
+
+                <!--<com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_camera"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignEnd="@id/sdv_profile_photo"
+                    android:layout_alignBottom="@id/sdv_profile_photo"
+                    fresco:backgroundImage="@color/white"
+                    fresco:placeholderImage="@drawable/ic_camera"
+                    fresco:placeholderImageScaleType="centerInside"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/white"
+                    fresco:roundingBorderWidth="2dp"/>-->
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_pic_rl"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/edit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/dp10"
+                android:background="@drawable/blue_btn_bg"
+                android:paddingLeft="@dimen/dp30"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp30"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/edit"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:id="@+id/email_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_tv"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/email"/>
+
+                <TextView
+                    android:id="@+id/email_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phone_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_ll"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/phone"/>
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/country_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_ll"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/country"/>
+
+                <TextView
+                    android:id="@+id/country_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/address_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/country_ll"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/address"/>
+
+                <TextView
+                    android:id="@+id/address_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/native_lang_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_ll"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/lang"/>
+
+                <TextView
+                    android:id="@+id/native_lang_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/change_pwd_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/native_lang_ll"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/dp10"
+                android:text="@string/change_pass"
+                android:textColor="@color/colorAccent"/>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

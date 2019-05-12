@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/noti_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:background="@color/white"
+                android:padding="@dimen/dp8">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/noti_img"
+        android:src="@mipmap/ic_chat_support"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"/>
+
+    <TextView
+        android:id="@+id/noti_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:layout_toStartOf="@id/new_lb"
+        android:layout_toEndOf="@id/noti_img"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/new_lb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/dp8"
+        android:background="@drawable/trial_view_bg"
+        android:paddingTop="@dimen/dp1"
+        android:paddingBottom="@dimen/dp1"
+        android:paddingStart="@dimen/dp5"
+        android:paddingEnd="@dimen/dp5"
+        android:text="@string/neww"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+</RelativeLayout>

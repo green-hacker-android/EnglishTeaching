@@ -1,0 +1,43 @@
+package inc.osbay.android.tutorroom.sdk.constant;
+
+import android.os.Environment;
+
+import java.io.File;
+
+public class CommonConstant  {
+    public static final int DB_CREATE_FAIL = 1;
+
+    public static final String WEB_SERVICE_URL = "http://s1.tutormandarin.net/mobileservice.asmx?op=Execute";
+
+
+    public static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
+    public static final String APPLICATION_FOLDER = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "Tutor Room";
+
+    public static final String MEDIA_PATH = APPLICATION_FOLDER + File.separator + "media";
+
+    public static final String IMAGE_PATH = APPLICATION_FOLDER + File.separator + "image";
+
+    public static final String LOG_PATH = APPLICATION_FOLDER + File.separator + "log";
+
+    public static final String PDF_PATH = APPLICATION_FOLDER + File.separator + "pdf";
+
+    /**
+     * Buffer Size.
+     */
+    public static final int BUFFER_SIZE = 1024;
+
+    /**
+     * Image Scale Size.
+     */
+    public static final int BUFFER_INPUT_SIZE = 1070;
+
+    /**
+     * Image Quality.
+     */
+    public static final int IMAGE_QUALITY = 100;
+
+    public static final String AGENT_PROMO_CODE_PREF = "AGENT_PROMO_CODE_PREF";
+
+    public static final String USE_PROMO_CODE_PREF = "USE_PROMO_CODE_PREF";
+}

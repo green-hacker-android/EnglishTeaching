@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <TextView
+        android:id="@+id/app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/microsoft_jhenghei"
+        android:text="@string/change_user"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font15"
+        android:textStyle="bold"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/profile_pic_img"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp70"
+        android:layout_marginBottom="@dimen/dp20"
+        android:clickable="false"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/person_round_bg"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/grey"
+        fresco:roundingBorderWidth="2dp"/>
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_pic_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp30"
+        android:fontFamily="@font/microsoft_jhenghei"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font30"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="@dimen/dp300"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:hint="@string/enter_pass"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/black_btn_bg"
+        android:fontFamily="@font/microsoft_jhenghei"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingTop="@dimen/dp10"
+        android:paddingRight="@dimen/dp30"
+        android:paddingBottom="@dimen/dp10"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font15"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp50"
+        android:fontFamily="@font/microsoft_jhenghei"
+        android:text="@string/forget_pass"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/font15"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"
+        android:layout_below="@id/forget_password"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/curve"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingTop="@dimen/dp20"
+        android:paddingRight="@dimen/dp20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp80"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginBottom="@dimen/dp10"
+            android:fontFamily="@font/microsoft_jhenghei"
+            android:text="@string/login_with"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font15"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20">
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:src="@drawable/fb_black"/>
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:src="@drawable/twitter_black"/>
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:src="@drawable/google_black"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

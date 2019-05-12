@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/dp250"
+        android:layout_height="@dimen/dp100"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/engleezi"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/font30"
+        android:textStyle="bold"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_bar"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:text="@string/check_internet"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+</RelativeLayout>

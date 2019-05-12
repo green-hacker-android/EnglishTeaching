@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey"
+                tools:context=".ui.fragment.TutorInfoFragment">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey">
+
+            <RatingBar
+                android:id="@+id/rb_tutor_rate"
+                style="@style/feedbackRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_bar_bg"
+                android:stepSize="0.5"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_tutor_photo"
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp80"
+                android:layout_below="@id/rb_tutor_rate"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp10"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/ic_profile_pic"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/white"
+                fresco:roundingBorderWidth="2dp"/>
+
+            <TextView
+                android:id="@+id/tv_course_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sdv_tutor_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:textColor="#777777"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/experience_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_course_title"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10">
+
+                <TextView
+                    android:id="@+id/teaching_exp_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/teach_experience"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/location_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/experience_ll"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/white"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5">
+
+                <TextView
+                    android:id="@+id/location_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/locationn"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/speciality_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location_ll"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5">
+
+                <TextView
+                    android:id="@+id/speciality_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/speciality"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/spoken_lang_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/speciality_ll"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5">
+
+                <TextView
+                    android:id="@+id/spoken_lang_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/spoken_lang"
+                    android:textColor="@color/colorPrimary"/>
+            </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/rate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/speciality_ll"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="x 1.00"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font30"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/credit_weight_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rate_tv"
+                android:layout_centerHorizontal="true"
+                android:text="@string/credit_weight"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font15"/>
+
+            <TextView
+                android:id="@+id/book_btn_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/credit_weight_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/blue_btn_bg"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp20"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/book_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font15"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/self_intro_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/book_btn_tv"
+                android:layout_margin="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="@string/self_intro"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/font15"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/self_intro_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/font15"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/self_intro_ll"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imv_intro_voice"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/play_64"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_intro_voice"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingEnd="10dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/tutor_info_progress_bar"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

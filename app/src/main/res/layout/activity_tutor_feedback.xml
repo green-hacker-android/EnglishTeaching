@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rl_main_tutor_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/title_background_light_black"
+                tools:context=".ui.activity.TutorFeedbackActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_tutor_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/vw_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/title_background_light_black"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_feedback_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10"
+                android:text="@string/tu_feedback_title"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_feedback_tutor_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/img_pre_tutor"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/white"
+                    fresco:roundingBorderWidth="2dp"/>
+
+                <RatingBar
+                    android:id="@+id/rb_feedback_rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:clickable="false"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/feedback_star_bg"
+                    android:stepSize="1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/vw_feedback"
+            android:background="@color/white"
+            android:padding="@dimen/dp10">
+
+            <RatingBar
+                android:id="@+id/rb_other_feedback_rating"
+                style="@style/feedbackRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_bar_bg_yellow_50"
+                android:stepSize="1"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_rating_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rb_other_feedback_rating"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/tu_star_3_5"
+                android:textColor="@color/colorAccent"/>
+
+            <EditText
+                android:id="@+id/et_student_msg"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/tv_rating_feedback"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/dp5"
+                android:background="@drawable/bg_stoke_black"
+                android:gravity="top"
+                android:hint="@string/tu_enter_comment_here"
+                android:padding="@dimen/dp5"/>
+
+            <TextView
+                android:id="@+id/btn_feedback_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/blue_btn_bg"
+                android:paddingLeft="@dimen/dp30"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp30"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/tu_btn_rating_submit"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tutor_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tutor_feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp30"
+            android:padding="@dimen/dp10"
+            android:text="@string/tu_feedback_title"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tutor_feedback_title"
+            android:layout_margin="@dimen/dp10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="@dimen/dp15"
+                android:background="@color/white"
+                android:paddingTop="50dp">
+
+                <TextView
+                    android:id="@+id/tv_tutor_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/tu_tutor_feedback"
+                    android:textColor="@color/colorAccent"/>
+
+                <RatingBar
+                    android:id="@+id/rb_tutor_rating"
+                    style="@style/feedbackRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_tutor_feedback"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_bar_bg_yellow_50"
+                    android:stepSize="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rb_tutor_rating"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/tu_rating_drag_and_press"
+                    android:textColor="@color/grey"/>
+
+            </RelativeLayout>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_tutor_feedback"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/img_pre_tutor"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/white"
+                fresco:roundingBorderWidth="2dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

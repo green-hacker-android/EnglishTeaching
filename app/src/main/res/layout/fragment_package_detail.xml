@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/package_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginEnd="@dimen/dp8"
+                android:layout_marginBottom="@dimen/dp8"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/package_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/package_name"
+                android:layout_marginStart="@dimen/dp8"
+                android:layout_marginBottom="@dimen/dp8"
+                android:textSize="@dimen/font15"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/package_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:layout_below="@id/package_desc"
+                android:layout_margin="@dimen/dp8"/>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/percent_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/package_cover"
+                android:layout_margin="@dimen/dp8"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/lesson_count_ll"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp8"
+                    app:layout_widthPercent="33%">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp8"
+                        android:text="@string/lessons"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"/>
+
+
+                    <TextView
+                        android:id="@+id/lesson_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/lesson_count_ll"
+                    android:background="@color/grey"
+                    app:layout_widthPercent="0.5%"/>
+
+                <LinearLayout
+                    android:id="@+id/total_time_ll"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/view1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp8"
+                    app:layout_widthPercent="33%">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp8"
+                        android:text="@string/total_time"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/total_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp3"
+                            android:text="@string/mins"
+                            android:textColor="@color/colorAccent"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/total_time_ll"
+                    android:background="@color/grey"
+                    app:layout_widthPercent="0.5%"/>
+
+                <LinearLayout
+                    android:id="@+id/credit_ll"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/view2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp8"
+                    app:layout_widthPercent="33%">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp8"
+                        android:text="@string/credits"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"/>
+
+
+                    <TextView
+                        android:id="@+id/credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </android.support.percent.PercentRelativeLayout>
+
+            <TextView
+                android:id="@+id/course_structure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/percent_rl"
+                android:layout_margin="@dimen/dp8"
+                android:layout_marginBottom="@dimen/dp8"
+                android:text="@string/course_structure"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/course_structure">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lesson_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8"/>
+
+                <TextView
+                    android:id="@+id/no_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp3"
+                    android:text="@string/no_lesson"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

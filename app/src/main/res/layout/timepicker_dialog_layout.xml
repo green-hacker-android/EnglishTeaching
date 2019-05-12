@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10">
+
+    <LinearLayout
+        android:id="@+id/time_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <NumberPicker
+            android:id="@+id/np_book_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:descendantFocusability="blocksDescendants"/>
+
+        <NumberPicker
+            android:id="@+id/np_book_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_ll"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/blue_btn_bg"
+            android:paddingStart="@dimen/dp30"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp30"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/cr_leave_room_cancel"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/ok_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_btn_bg"
+            android:paddingStart="@dimen/dp30"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp30"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/ok"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/tool_bar"
+                layout="@layout/tool_bar"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_main_slider"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_below="@id/tool_bar"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/vp_main_slider"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/top_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/top_curve"/>
+
+                <RelativeLayout
+                    android:id="@+id/features_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <LinearLayout
+                        android:id="@+id/dashboard_ll1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp20"
+                        android:paddingRight="@dimen/dp20"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/package_imv"
+                                android:layout_width="@dimen/dp80"
+                                android:layout_height="@dimen/dp80"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@mipmap/lesson_dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/package_imv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:fontFamily="@fonts/microsoft_jhenghei"
+                                android:text="@string/packagee"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/lesson_imv"
+                                android:layout_width="@dimen/dp80"
+                                android:layout_height="@dimen/dp80"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@mipmap/classroom_dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/lesson_imv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:fontFamily="@fonts/microsoft_jhenghei"
+                                android:text="@string/lesson"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/tutor_imv"
+                                android:layout_width="@dimen/dp80"
+                                android:layout_height="@dimen/dp80"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@mipmap/tutor_dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tutor_imv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:fontFamily="@fonts/microsoft_jhenghei"
+                                android:text="@string/tutor"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dashboard_ll2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dashboard_ll1"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp20"
+                        android:paddingRight="@dimen/dp20"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/schedule_img"
+                                android:layout_width="@dimen/dp80"
+                                android:layout_height="@dimen/dp80"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@mipmap/schedule_dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/schedule_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:fontFamily="@fonts/microsoft_jhenghei"
+                                android:text="@string/schedule"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/store_imv"
+                                android:layout_width="@dimen/dp80"
+                                android:layout_height="@dimen/dp80"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@mipmap/cart_dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/store_imv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:fontFamily="@fonts/microsoft_jhenghei"
+                                android:text="@string/store"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/online_support_img"
+                                android:layout_width="@dimen/dp80"
+                                android:layout_height="@dimen/dp80"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@mipmap/call_dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/online_support_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:fontFamily="@fonts/microsoft_jhenghei"
+                                android:text="@string/online_support"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/bottom_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/bottom_curve"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/left_menu_drawer"
+            android:layout_width="@dimen/dp300"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"/>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

@@ -1,0 +1,307 @@
+<resources>
+    <string name="app_name">TutorRoom</string>
+    <string name="storage_perm">SDCard Read/Write permissions needed. Please allow in App Settings for additional functionality.</string>
+    <string name="check_internet">Check Internet Connection</string>
+
+    <!-- Sign Up/Log in -->
+    <string name="get_start">GET START</string>
+    <string name="start">Start</string>
+    <string name="name">Hi, guest!</string>
+    <string name="welcome">Welcome to Engleezi!</string>
+    <string name="enter_name">Enter Your Name</string>
+    <string name="enter_pass">Enter Your Password</string>
+    <string name="reenter_pass">Re-Enter Password</string>
+    <string name="enter_email">Enter Your Email</string>
+    <string name="signin">SIGN IN</string>
+    <string name="login_with">Or Login with:</string>
+    <string name="forget_pass">Forget password?</string>
+    <string name="login">LOGIN</string>
+    <string name="lmd_sign_out_msg">Are you sure you want to sign out?</string>
+    <string name="change_user">Change User</string>
+    <string name="enter_phone">Enter Your Phone</string>
+    <string name="signup">Sign Up</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="have_no_account">Do not have an account?</string>
+    <string name="name_error">* Please enter name</string>
+    <string name="pass_error">* Please enter password</string>
+    <string name="repass_error">* Please reenter password</string>
+    <string name="email_error">* Please enter email</string>
+    <string name="pass_not_matched">* Passwords are not matched</string>
+    <string name="invalid_email">* Invalid Email</string>
+    <string name="pass_min_length">* Password must have 6–10 Characters</string>
+    <string name="phone_error">* Please enter phone number</string>
+    <string name="gta_failed">Backing up to GTA Studio Failed!</string>
+
+    <!-- Dashboard -->
+    <string name="packagee">Package</string>
+    <string name="lesson">Lesson</string>
+    <string name="classs">Class</string>
+    <string name="tutor">Tutor</string>
+    <string name="schedule">Schedule</string>
+    <string name="store">Store</string>
+    <string name="faq">FAQ</string>
+    <string name="setting">Setting</string>
+    <string name="signout">Sign Out</string>
+    <string name="online_support">Online Support</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="tu_search">Search&#8230;</string>
+
+    <!-- Tutor -->
+    <string name="tu_lst_title">Tutor</string>
+    <string name="teach_exp">Teaching Exp</string>
+    <string name="teach_experience">Teaching Experience : %1$s</string>
+    <string name="credit_weight">Credit Weight</string>
+    <string name="location">Location</string>
+    <string name="loading">Loading…</string>
+    <string name="book_now">Book Now</string>
+    <string name="years">%1$s Years</string>
+    <string name="speciality">Speciality : %1$s</string>
+    <string name="spoken_lang">Spoken Language : %1$s</string>
+    <string name="self_intro">Self Introduction : </string>
+    <string name="locationn">Location : %1$s</string>
+    <string name="tu_lst_refresh_failed">Tutor list refresh failed.</string>
+    <string name="lesson_lst_refresh_failed">Lesson list refresh failed.</string>
+    <string name="tu_lst_cant_download_video">Can\'t download audio file.</string>
+
+    <!-- Single booking -->
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="choose_lesson">Choose Lesson</string>
+    <string name="choose_time">Choose Time</string>
+    <string name="choose_tutor">Choose Tutor</string>
+    <string name="choose_package">Select Package</string>
+    <string name="search">Search</string>
+    <string name="next">Next</string>
+    <string name="confirm">Confirm</string>
+    <string name="single_book">Single Booking</string>
+    <string name="select_lesson">Select lesson to continue</string>
+    <string name="select_date">Select date to continue</string>
+    <string name="select_tutor">Select tutor to confirm the booking</string>
+    <string name="select_date_empty">Select date to continue booking</string>
+    <string name="select_date_err">You must book the lesson %1$s minutes in advance</string>
+    <string name="get_lesson_err">Downloading lessons failed</string>
+    <string name="description">Description</string>
+    <string name="no_data">No Data for your request</string>
+    <string name="no_tutor">No Tutor found</string>
+
+    <!-- Profile -->
+    <string name="profile">Profile</string>
+    <string name="namee">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="country">Country</string>
+    <string name="edit">Edit</string>
+    <string name="change_pass">Change Password</string>
+    <string name="address">Address</string>
+    <string name="native_lang">Native Language</string>
+    <string name="learning_lang">Learning Language</string>
+    <string name="ac_take_photo">Take Photo</string>
+    <string name="ac_choose_from_photos">Camera Rolls</string>
+    <string name="ot_capture">Capture</string>
+    <string name="ac_info_choose">Choose</string>
+    <string name="ac_no_photo_url">Photo unreadable</string>
+
+    <!-- Change Password -->
+    <string name="password">Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_pass">Confirm New Password</string>
+    <string name="pwd_changed">Password has been changed successfully</string>
+    <string name="old_pass_error">* Please enter old password</string>
+    <string name="new_pass_error">* Please enter new password</string>
+    <string name="conf_new_pass_error">* Confirm new password</string>
+
+    <!-- Booking -->
+    <string name="bo_booking_confirmed">Booking Confirmed!</string>
+    <string name="bo_view_my_schedule">View my schedule</string>
+    <string name="bo_book_another_lesson">Book another lesson</string>
+    <string name="bo_view_other_tutors">View other tutors</string>
+    <string name="bo_back_main_menu">Back to main menu</string>
+
+    <!-- Schedule -->
+    <string name="book_new">+ Book New Lesson</string>
+    <string name="lesson_book">Single Classroom</string>
+    <string name="topic_book">Trial classroom</string>
+
+    <!-- Package -->
+    <string name="packagee_detail">Package Detail</string>
+    <string name="lessons">Lessons</string>
+    <string name="total_time">Total Time</string>
+    <string name="course_structure">Course Structure</string>
+    <string name="mins">mins</string>
+    <string name="no_lesson">No Lesson found</string>
+    <string name="no_package">No Package found</string>
+
+    <!-- Lesson -->
+    <string name="lesson_detail">Lesson Detail</string>
+    <string name="minute">%1$s minutes</string>
+
+    <!-- ClassRoom -->
+    <string name="classroom">ClassRoom</string>
+    <string name="cr_send">Send</string>
+    <string name="cr_join_class_room">Joining to the class room&#8230;</string>
+    <string name="os_online_support_lbl">Online Support</string>
+    <string name="ac_faq">FAQ</string>
+    <string name="cr_camera_permission">Camera and Microphone permissions needed. Please allow in App Settings for additional functionality.</string>
+    <string name="cr_leave_room">Leave the Classroom?</string>
+    <string name="cr_leave_room_msg">This movement will end the call and leave the Classroom.</string>
+    <string name="cr_leave_room_leave">Leave</string>
+    <string name="cr_leave_room_cancel">Cancel</string>
+    <string name="sd_network_msg">Make sure your device has enough free memory and stable network connection.</string>
+    <string name="sd_network_continue">Continue</string>
+    <string name="sd_network_notice">Notice</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="cr_tutor_soon">Tutor will be online soon.</string>
+
+    <!-- Tutor Feedback -->
+    <string-array name="tutor_feedback_type">
+        <item>Tutor Feedback</item>
+        <item>Call Quality</item>
+        <item>Content</item>
+        <item>Other Comments</item>
+    </string-array>
+    <string name="tu_tutor_feedback">How was your tutor today?</string>
+    <string name="tu_star_3_5">Thanks! Do you have any further suggestions?</string>
+    <string name="tu_star_1_2">Sorry to hear that, would you give us more feedbacks?</string>
+    <string name="tu_call_quality">How was the call quality today?</string>
+    <string name="tu_feedback_content">How was the lesson content today?</string>
+    <string name="tu_feedback_others">Do you have any additional comments?</string>
+    <string name="tu_enter_comment_here">Enter your comment here&#8230;</string>
+    <string name="tu_rating_notice">Notice: \nYou can swipe right to give more ratings and comments.</string>
+    <string name="tu_btn_rating_submit">Submit</string>
+    <string name="tu_rating_drag_and_press">Press or drag to rate</string>
+    <string name="tu_feedback_title">Tutor Feedback</string>
+
+    <!-- Store -->
+    <string name="have">You have</string>
+    <string name="price_tier">Price Tier</string>
+    <string name="credits">Credits</string>
+    <string name="_credits">%1$s Credits</string>
+    <string name="credit">Credit</string>
+    <string name="usd">USD</string>
+    <string name="buy">Buy now</string>
+    <string name="pay_paypal">Pay with Paypal</string>
+    <string name="buy_ammount">Buy a different amount</string>
+    <string name="ask_consultant">Ask your consultant about discount offers</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="dollar">$</string>
+    <string name="credit_100">100 Credit</string>
+    <string name="credit_200">200 Credit</string>
+    <string name="credit_300">300 Credit</string>
+    <string name="credit_1000">$ 1000.0 USD</string>
+    <string name="credit_2000">$ 2000.0 USD</string>
+    <string name="credit_3000">$ 3000.0 USD</string>
+    <string name="_1">1</string>
+    <string name="_4">4</string>
+    <string name="_50">50</string>
+    <string name="_100">100</string>
+    <string name="_150">150</string>
+    <string name="_200">200</string>
+    <string name="amount">Amount</string>
+    <string name="no_credit_tier">No Credit Tier found</string>
+
+    <!-- FAQ -->
+    <string name="faq_1">Can’t see the tutor’s video</string>
+    <string name="faq_2">Can’t see the student video</string>
+    <string name="faq_3">Can’t send messages</string>
+    <string name="faq_4">Can’t upload PDF</string>
+    <string name="faq_5">Can’t save file</string>
+    <string name="faq_6">Can’t video record lesson</string>
+    <string name="faq_7">Websocket disconnect</string>
+    <string name="faq_8">Internet connection unstable</string>
+    <string name="faq_9">Can only see whiteboard tools moving?</string>
+    <string name="faq_10">What happens if the student leaves the class?</string>
+    <string name="faq_11">What happens if tutor leaves the class?</string>
+    <string name="faq_12">How to join class?</string>
+    <string name="faq_13">How to know if i’ve successfully joined class?</string>
+    <string name="faq_14">How to leave class?</string>
+    <string name="faq_15">Does it matter if student or tutor leaves first?</string>
+    <string name="faq_16">How to zoom in Whiteboard?</string>
+    <string name="faq_17">How to move the screen?</string>
+    <string name="faq_18">Can I print?</string>
+
+    <string name="faq1_content1">a. Check the network connection with the link: http://www.speedtest.net/</string>
+    <string name="faq1_content2">b. Check if the audio works or not</string>
+    <string name="faq1_content3">c. Quit from the current classroom and rejoin again</string>
+
+    <string name="faq2_content1">a.	Check if the camera works properly</string>
+    <string name="faq2_content2">b.	Check if the camera works successfully in other software (Skype, QQ, etc)</string>
+
+    <string name="faq3_content1">a.	Quit from the current classroom and rejoin again.</string>
+    <string name="faq3_content2">b.	If not working, alert your tutor. They can address the problem from their side</string>
+
+    <string name="faq4_content1">You are not allowed to upload PDF file.</string>
+
+    <string name="faq5_content1">This feature is not currently active in our whiteboard</string>
+
+    <string name="faq6_content1">a.	This feature is not currently active in our whiteboard</string>
+    <string name="faq6_content2">b.	The system does automatic recorded depending on the company’s preferences</string>
+
+    <string name="faq7_content1">Quit from the current classroom and rejoin again.</string>
+
+    <string name="faq8_content1">a.	Check the network connection with the link: http://www.speedtest.net/</string>
+    <string name="faq8_content2">b.	Quit from the current classroom and rejoin again</string>
+
+    <string name="faq9_content1">Quit from the current classroom and rejoin again</string>
+
+    <string name="faq10_content1">If student meets problems in classroom, contact consultant to get support.</string>
+
+    <string name="faq11_content1">If tutor leave classroom by exception, try to rejoin it as first choice. If it still failed, ask consultant to check what happened.</string>
+
+    <string name="faq12_content1">a. Login the student side.</string>
+    <string name="faq12_content2">b. Check the coming up schedule class.</string>
+    <string name="faq12_content3">c. Click item in calendar.</string>
+    <string name="faq12_content4">d. After the tutor click \'join\' at the backend, the \'Start class\' button will become green from light green. </string>
+    <string name="faq12_content5">e. Click \'Start class\' to join the classroom.</string>
+
+    <string name="faq13_content1">a. Whiteboard works</string>
+    <string name="faq13_content2">b. Message sends successfully</string>
+    <string name="faq13_content3">c. Can see each other</string>
+    <string name="faq13_content4">d. Can hear each other</string>
+
+    <string name="faq14_content1">Click \'Leave\' in the top left or press back button</string>
+
+    <string name="faq15_content1">It doesn\'t matter. Whether a student leaves first or tutor leaves first, a new feedback page will be shown.</string>
+
+    <string name="faq16_content1">a. Use the tool on the right hand side.</string>
+    <string name="faq16_content2">b. Use two finger to pinch in or pinch out.</string>
+
+    <string name="faq17_content1">Use the whiteboard tool on the left side.   </string>
+
+    <string name="faq18_content1">No</string>
+
+    <!-- Online Support -->
+    <string name="send">SEND</string>
+    <string name="dash">|</string>
+    <string name="os_msg_body">Hi, this is Engleezi online support. How can we help you?</string>
+    <string name="os_working_period">Sorry, Engleezi online support is only live from 9am - 5pm China Standard Time. Please re-send your message or call at that time for a prompt reply. Thank you.</string>
+    <string name="os_no_consultants">Sorry, Engleezi consultants are not available to take your call right now. Please leave a written message in the window and we\'ll get back to you as soon as we can.</string>
+    <string name="os_call_ended">The call was ended.</string>
+    <string name="call_support">Call Support</string>
+    <string name="os_call_ready">Ready to call?</string>
+    <string name="os_call_ready_msg">You are about to make a phone call to a live consultant. Press confirm to call.</string>
+    <string name="permission">Permission</string>
+    <string name="check_perm">Need to check permission in App System Setting</string>
+    <string name="os_dialog_connect_failure_msg">Could not join the class.</string>
+    <string name="os_calling">Calling &#8230;</string>
+    <string name="os_speaker">Speaker</string>
+    <string name="os_mute">Mute</string>
+    <string name="os_hide">Hide</string>
+    <string name="os_end_call">END CALL</string>
+    <string name="os_call_support_success">You had called %1$s successfully at %2$s</string>
+    <string name="os_call_support_fail">You had called %1$s failed at %2$s</string>
+
+    <!-- Notification -->
+    <string name="notification">Notification</string>
+    <string name="neww">New</string>
+    <string name="no_noti">No Notification</string>
+
+    <!-- Setting -->
+    <string name="lang">Language</string>
+    <string name="timezone">Time Zone</string>
+    <string name="end">English</string>
+    <string name="forget_pass_submit">Submit</string>
+</resources>

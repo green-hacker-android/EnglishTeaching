@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/light_grey"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar">
+
+        <RelativeLayout
+            android:id="@+id/main_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp10">
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/prl_promo_i_enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_blue">
+
+                <TextView
+                    android:id="@+id/credit_title"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/packagee"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_widthPercent="41%"/>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/credit_title"
+                    android:background="@color/white"
+                    app:layout_widthPercent="0.5%"/>
+
+                <TextView
+                    android:id="@+id/credit"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/view1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/credit"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_widthPercent="29%"/>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/credit"
+                    android:background="@color/white"
+                    app:layout_widthPercent="0.5%"/>
+
+                <TextView
+                    android:id="@+id/credit_amount"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/view2"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/amount"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_widthPercent="29%"/>
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/credit_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prl_promo_i_enter"
+                android:background="@color/white"
+                android:visibility="visible"/>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_credit_tier"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"/>
+</RelativeLayout>

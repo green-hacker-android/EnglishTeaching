@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <!-- Rating Bar theme. -->
+    <style name="feedbackRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ic_star_full_50</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
+    <!-- Spinner Theme-->
+    <style name="SpinnerTheme" parent="android:Widget.DeviceDefault.Spinner">
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+</resources>

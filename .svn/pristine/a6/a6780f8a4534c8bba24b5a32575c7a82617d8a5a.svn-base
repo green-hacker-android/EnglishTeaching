@@ -1,0 +1,89 @@
+package inc.osbay.android.tutorroom.ui.activity;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
+import android.util.Log;
+
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+
+import inc.osbay.android.tutorroom.R;
+
+public class MainActivity extends AppCompatActivity {
+
+    /*public static final String md5(final String s) {
+        final String MD5 = "MD5";
+        try {
+            // Create MD5 Hash
+            MessageDigest digest = MessageDigest
+                    .getInstance(MD5);
+            //digest.update(s.getBytes("UTF-8"));
+            byte messageDigest[] = digest.digest();
+            //final String result = Hex.encodeHex(messageDigest, true);
+            String hash = new BigInteger(1, messageDigest).toString(16);
+
+            return hash;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }*/
+            /*MessageDigest md5 = MessageDigest.getInstance("MD5");
+            md5.update(StandardCharsets.UTF_8.encode(s));
+            return String.format("%032x", new BigInteger(1, md5.digest()));*/
+
+
+    public String md5(String s) {
+        try {
+            //s = "C0000000012018-11-02 00:00:00MB_REGISTEReyJ1c2VyX25hbWUiOiJTYWkgU29lIEhhcm4iLCJwYXNzd29yZCI6IjEyMzQ1NiIsImVtYWlsIjoic2Fpc29laGFybiBAZ21haWwuY29tIiwicmVnaXN0ZXJfdHlwZSI6IjEifQ==";
+            // Create MD5 Hash
+            MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+            //digest.update(s.getBytes("UTF-8"));
+            byte messageDigest[] = digest.digest(s.getBytes("UTF-8"));
+            Log.d("TEST", "Byte Value = " + Arrays.toString(messageDigest));
+
+            // Create Hex String
+            StringBuilder hexString = new StringBuilder();
+            for (byte aMessageDigest : messageDigest)
+                hexString.append(Integer.toHexString(0xFF & aMessageDigest));
+
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_login);
+
+        String testValue = "{\"user_name\":\"Rose\",\"password\":\"654321\",\"email\":\"rose@gmail.com\",\"register_type\":\"1\"}";
+
+        byte[] encodeValue = new byte[0];
+        try {
+            encodeValue = Base64.encode(testValue.getBytes("UTF-8"), Base64.DEFAULT);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        String encodedString = new String(encodeValue);
+        encodedString = encodedString.replace("\n", "");
+        Log.d("TEST", "Encoded Value = " + encodedString);
+
+        // 2. Buildup the sign string
+        String companyID = "C000000001";
+        String requestDate = "2018-11-02 00:00:00";
+        String cmd = "MB_REGISTER";
+        String signSimple = companyID + requestDate + cmd + encodedString;
+        signSimple = signSimple.trim();
+        Log.d("TEST", "String Input = " + signSimple);
+
+        String signedString = md5(signSimple);
+        Log.d("TEST", "signed Value = " + signedString);
+    }
+}
